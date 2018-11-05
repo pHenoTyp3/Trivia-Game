@@ -1,0 +1,53 @@
+body {
+    font-family: 'Limelight', sans-serif;
+    /* background-image: url("../images/chicagomob.jpg"); */
+    text-align: center;
+    
+}
+
+h1 {
+    font-family: 'Limelight';
+    font-size: 30px;
+    color: red;
+    text-align: center;
+    clear: both;
+}
+
+#button  {
+    background-color: red;
+    color: white;
+    width: 200px;
+    height: 75px;
+    font-style: italic;
+    font-size: 18px;
+}
+
+#after_submit {
+    visibility: hidden;
+}
+
+.hide {
+    display: none;
+}
+
+.start {
+    margin-top: 45%;
+    background-color: red;
+    color: white;
+    width: 200px;
+    height: 75px;
+    font-style: italic;
+    font-size: 18px;
+}
+.timer {
+    text-align: center;
+    font-size: 40px;
+}
+
+.main-container {
+    background-color: white;
+    max-width: 1000px;
+    margin: auto;
+    padding: 30px;
+    margin-top: 50px;
+}
