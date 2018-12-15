@@ -2,112 +2,116 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Trivia Game</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trivia Game</title>
+
+
     <link href="https://fonts.googleapis.com/css?family=Limelight" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <script  src="https://code.jquery.com/jquery-3.3.1.min.js"   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="   crossorigin="anonymous"></script>
-    <script src = "assets/javascript/app.js"></script>
+
 </head>
 
 <body>
 
-<button id = "play">Play</button>
+<button class = "start">START</button>
 
-<div id = "main-container hide">
+<div class = "main-container hide">
 
 
-   <div id = "clock"></div>
+   <div class = "timer"></div>
 
-        <h1> Ready To Play?</h1>  
+   <h1> Ready To Play?</h1>  
 
-        <form id="quiz" name="quiz">
+   <form id="quiz" name="quiz">
+   
+   <h2>Which planet is nearest the sun?</h2>
+   <input type="radio" id = "mc" name="question1" value="Mercury"> Mercury
+   <input type="radio" id = "mc" name="question1" value="Uranus"> Uranus
+   <input type="radio" id = "mc" name="question1" value="Pluto"> Pluto
+   <input type="radio" id = "mc" name="question1" value="Mars"> Mars
+   <input type="radio" id = "mc" name="question1" value="Jupiter"> Juptier
+
+   <h2>How many dots are there on two dice?</h2>
+   <input type="radio" id = "mc" name="question2" value="56"> 56
+   <input type="radio" id = "mc" name="question2" value="42"> 42
+   <input type="radio" id = "mc" name="question2" value="37"> 37
+   <input type="radio" id = "mc" name="question2" value="10"> 10
+   <input type="radio" id = "mc" name="question2" value="2"> 2
+
+   <h2>Which is the largest ocean in the world?</h2>
+   <input type="radio"  id = "mc" name="question3" value="Pacific"> Pacific Ocean
+   <input type="radio"  id = "mc" name="question3" value="Artic"> Artic Ocean
+   <input type="radio"  id = "mc" name="question3" value="Atlantic"> Atlantic Ocean 
+   <input type="radio"  id = "mc" name="question3" value="Indian"> Indian Ocean
+   <input type="radio"  id = "mc" name="question3" value="Southern"> Southern Ocean
+
+   <h2>What is the first letter on a typewriter?</h2>
+   <input type="radio"  id = "mc" name="question4" value="R"> R
+   <input type="radio"  id = "mc" name="question4" value="P"> P
+   <input type="radio"  id = "mc" name="question4" value="L"> L
+   <input type="radio"  id = "mc" name="question4" value="S"> S
+   <input type="radio"  id = "mc" name="question4" value="Q"> Q
+
+   <h2>Who was the first Canadian Prime Minister?</h2>
+   <input type="radio"  id = "mc" name="question5" value="Paul Martin"> Paul Martin
+   <input type="radio"  id = "mc" name="question5" value="Pierre Trudeau"> Pierre Trudeau
+   <input type="radio"  id = "mc" name="question5" value="John A Macdonald"> John A Macdonald
+   <input type="radio"  id = "mc" name="question5" value="Brian Mulroney"> Brian Mulroney
+   <input type="radio"  id = "mc" name="question5" value="HStephen Harper"> Stephen Harper
+
+   <h2>What horoscope sign has a crab?</h2>
+   <input type="radio"  id = "mc" name="question6" value="Libra"> Libra
+   <input type="radio"  id = "mc" name="question6" value="Cancer"> Cancer
+   <input type="radio"  id = "mc" name="question6" value="Ares"> Ares
+   <input type="radio"  id = "mc" name="question6" value="Leo"> Leo
+   <input type="radio"  id = "mc" name="question6" value="Aquarius"> Aquarius
+
+   <h2>Which is the only mammal that can’t jump?</h2>
+   <input type="radio"  id = "mc" name="question7" value="Duck"> Ducks
+   <input type="radio"  id = "mc" name="question7" value="Kangaroo"> Kangaroo
+   <input type="radio"  id = "mc" name="question7" value="Puma"> Puma
+   <input type="radio"  id = "mc" name="question7" value="Elephant"> Elephant
+   <input type="radio"  id = "mc" name="question7" value="Ants"> Ants
+
+   <h2>Where is the smallest bone in the body?</h2>
+   <input type="radio"  id = "mc" name="question8" value="Nose"> Nose Bridge
+   <input type="radio"  id = "mc" name="question8" value="Ankle"> Ankle
+   <input type="radio"  id = "mc" name="question8" value="Knee"> Knee
+   <input type="radio"  id = "mc" name="question8" value="Pinky"> Pinky Toe
+   <input type="radio"  id = "mc" name="question8" value="Ear"> Ear
+
+   <h2>When did the First World War start?</h2>
+   <input type="radio" id = "mc"  name="question9" value="1914"> 1914
+   <input type="radio" id = "mc"  name="question9" value="1963"> 1963
+   <input type="radio" id = "mc"  name="question9" value="1814"> 1814
+   <input type="radio" id = "mc"  name="question9" value="2001"> 2001
+   <input type="radio" id = "mc"  name="question9" value="All the above"> All the above
+   
+
+   <h2>What temperature does water boil at?</h2>
+   <input type="radio" id = "mc" name="question10" value="100C"> 100C
+   <input type="radio" id = "mc" name="question10" value="100F"> 100F
+   <input type="radio" id = "mc" name="question10" value="101C"> 101C
+   <input type="radio" id = "mc" name="question10" value="99C"> 99C
+   <input type="radio" id = "mc" name="question10" value="102F"> 102F
+   <br><br>
         
-        <h2>Which planet is nearest the sun?</h2>
-        <input type="radio" id = "mc" name="question1" value="Mercury"> Mercury
-        <input type="radio" id = "mc" name="question1" value="Uranus"> Uranus
-        <input type="radio" id = "mc" name="question1" value="Pluto"> Pluto
-        <input type="radio" id = "mc" name="question1" value="Mars"> Mars
-        <input type="radio" id = "mc" name="question1" value="Jupiter"> Juptier
-
-        <h2>How many dots are there on two dice?</h2>
-        <input type="radio" id = "mc" name="question2" value="56"> 56
-        <input type="radio" id = "mc" name="question2" value="42"> 42
-        <input type="radio" id = "mc" name="question2" value="37"> 37
-        <input type="radio" id = "mc" name="question2" value="10"> 10
-        <input type="radio" id = "mc" name="question2" value="2"> 2
-
-        <h2>Which is the largest ocean in the world?</h2>
-        <input type="radio"  id = "mc" name="question3" value="Pacific"> Pacific Ocean
-        <input type="radio"  id = "mc" name="question3" value="Artic"> Artic Ocean
-        <input type="radio"  id = "mc" name="question3" value="Atlantic"> Atlantic Ocean 
-        <input type="radio"  id = "mc" name="question3" value="Indian"> Indian Ocean
-        <input type="radio"  id = "mc" name="question3" value="Southern"> Southern Ocean
-
-        <h2>What is the first letter on a typewriter?</h2>
-        <input type="radio"  id = "mc" name="question4" value="R"> R
-        <input type="radio"  id = "mc" name="question4" value="P"> P
-        <input type="radio"  id = "mc" name="question4" value="L"> L
-        <input type="radio"  id = "mc" name="question4" value="S"> S
-        <input type="radio"  id = "mc" name="question4" value="Q"> Q
-
-        <h2>Who was the first Canadian Prime Minister?</h2>
-        <input type="radio"  id = "mc" name="question5" value="Paul Martin"> Paul Martin
-        <input type="radio"  id = "mc" name="question5" value="Pierre Trudeau"> Pierre Trudeau
-        <input type="radio"  id = "mc" name="question5" value="John A Macdonald"> John A Macdonald
-        <input type="radio"  id = "mc" name="question5" value="Brian Mulroney"> Brian Mulroney
-        <input type="radio"  id = "mc" name="question5" value="HStephen Harper"> Stephen Harper
-
-        <h2>What horoscope sign has a crab?</h2>
-        <input type="radio"  id = "mc" name="question6" value="Libra"> Libra
-        <input type="radio"  id = "mc" name="question6" value="Cancer"> Cancer
-        <input type="radio"  id = "mc" name="question6" value="Ares"> Ares
-        <input type="radio"  id = "mc" name="question6" value="Leo"> Leo
-        <input type="radio"  id = "mc" name="question6" value="Aquarius"> Aquarius
-
-        <h2>Which is the only mammal that can’t jump?</h2>
-        <input type="radio"  id = "mc" name="question7" value="Duck"> Ducks
-        <input type="radio"  id = "mc" name="question7" value="Kangaroo"> Kangaroo
-        <input type="radio"  id = "mc" name="question7" value="Puma"> Puma
-        <input type="radio"  id = "mc" name="question7" value="Elephant"> Elephant
-        <input type="radio"  id = "mc" name="question7" value="Ants"> Ants
-
-        <h2>Where is the smallest bone in the body?</h2>
-        <input type="radio"  id = "mc" name="question8" value="Nose"> Nose Bridge
-        <input type="radio"  id = "mc" name="question8" value="Ankle"> Ankle
-        <input type="radio"  id = "mc" name="question8" value="Knee"> Knee
-        <input type="radio"  id = "mc" name="question8" value="Pinky"> Pinky Toe
-        <input type="radio"  id = "mc" name="question8" value="Ear"> Ear
-
-        <h2>When did the First World War start?</h2>
-        <input type="radio" id = "mc"  name="question9" value="1914"> 1914
-        <input type="radio" id = "mc"  name="question9" value="1963"> 1963
-        <input type="radio" id = "mc"  name="question9" value="1814"> 1814
-        <input type="radio" id = "mc"  name="question9" value="2001"> 2001
-        <input type="radio" id = "mc"  name="question9" value="All the above"> All the above
-        
-
-        <h2>What temperature does water boil at?</h2>
-        <input type="radio" id = "mc" name="question10" value="100C"> 100C
-        <input type="radio" id = "mc" name="question10" value="100F"> 100F
-        <input type="radio" id = "mc" name="question10" value="101C"> 101C
-        <input type="radio" id = "mc" name="question10" value="99C"> 99C
-        <input type="radio" id = "mc" name="question10" value="102F"> 102F
-        <br><br>
-        
-        <input id = "button" type = "button" value = "Click me!" onclick = "checkAns();">
+        <input id = "button" type = "button" value = "Did you win?!" onclick = "check();">
         
         </form>
 
-        <div id = "afterSubmission">
-            <p id = "correctAnswers"></p>
+        <div id = "after_submit">
+            <p id = "number_correct"></p>
 
         </div>
-        <button id = "stop-music hide">Stop Music</button>
+        <button class = "stop-music hide">Stop Music</button>
     </div>
 
 </html>
 
+<script src = "assets/javascript/app.js"></script>
        
 </body>
 </html>

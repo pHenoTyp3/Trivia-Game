@@ -1,6 +1,6 @@
 body {
     font-family: 'Limelight', sans-serif;
-    /* background-image: url("../images/chicagomob.jpg"); */
+    background-image: url("../images/abstract.png");
     text-align: center;
     
 }
@@ -45,7 +45,7 @@ h1 {
 }
 
 .main-container {
-    background-color: white;
+    background-color:none;
     max-width: 1000px;
     margin: auto;
     padding: 30px;

@@ -1,27 +1,27 @@
 var audioElement = document.createElement("audio");
-        audioElement.setAttribute("src", "assets/audio/Victory-Fanfare.mp3");
+        audioElement.setAttribute("src", "assets/audio/Victory.mp3");
 
-var timer;
-$("#play").on("click",function(){
-    $("#main-container").removeClass("hide")
-    $("#play").addClass("hide")
+var mytimer
+
+document.querySelector(".start").addEventListener("click",function(){
+
+    document.querySelector(".main-container").classList.remove("hide")
+    document.querySelector(".start").classList.add("hide")
 
     var time = 90
-    $("#clock").html(time)
-    timer = setInterval(function(){
-        time--
-        $("#clock").html(time)
-        if(time == 0){
-            checkAns()
-            clearInterval(timer)
-        }
+    document.querySelector(".timer").innerHTML=time
+    mytimer = setInterval(function(){
+    time -- 
+    document.querySelector(".timer").innerHTML=time
+    if (time==0){
+        check()
+        clearInterval(mytimer)
+    }
     },1000)
-
 })
 
-
-function checkAns(){
-    clearInterval(timer)  
+function check(){
+    clearInterval(mytimer)  
 var question1 = document.quiz.question1.value;
 var question2 = document.quiz.question2.value;
 var question3 = document.quiz.question3.value;
@@ -32,7 +32,7 @@ var question7 = document.quiz.question7.value;
 var question8 = document.quiz.question8.value;
 var question9 = document.quiz.question9.value;
 var question10 = document.quiz.question10.value;
-var correctAns = 0;
+var correct = 0;
 
 if (question1 == ("Mercury")) {
     correct++;
@@ -75,26 +75,26 @@ if (question10 == ("100C")) {
     correct++;
 }
 
-// console.log (correctAns)
+console.log (correct)
 
 if (correct > 7) {
  audioElement.play()
-$("#stop-music").removeClass("hide")
-$("#stop-music").on("click",function(){
+ document.querySelector(".stop-music").classList.remove("hide")
+ document.querySelector(".stop-music").addEventListener("click",function(){
      audioElement.pause()
  })
 }
 
 else {
     setTimeout(function(){
-        alert ("You lost the Game. Try Again")
+        alert ("Your party has been k.o'd")
     },500)
     
 }
 
 
-$("#afterSubmission").style.visibility = "visible";
-$("#correctAnswers").text("You got " + correct + " correct.");
+document.getElementById("after_submit").style.visibility = "visible";
+document.getElementById("number_correct").innerHTML = "You got " + correct + " correct. ";
 }
 
 
